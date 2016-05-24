@@ -203,7 +203,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (11.1.2)
     refills (0.1.0)
-    rollbar (2.7.0)
+    rollbar (2.11.3)
       multi_json
     rspec-core (3.4.4)
       rspec-support (~> 3.4.0)
@@ -323,7 +323,7 @@ DEPENDENCIES
   rails (= 4.2.6)
   rails_12factor (= 0.0.3)
   refills (= 0.1.0)
-  rollbar (= 2.7.0)
+  rollbar (= 2.11.3)
   rspec-rails (= 3.4.0)
   sass-rails (= 5.0.4)
   secure_headers (= 2.4.4)
