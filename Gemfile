@@ -59,4 +59,5 @@ group :development, :test do
   gem 'spring-commands-rspec', '1.0.4'
   gem 'byebug',                '8.2.1'
   gem 'spring',                '1.5.0'
+  gem 'fuubar',                '2.0.0'
 end
