@@ -1,12 +1,15 @@
 # greymane
 
-This project is a [Rails](http://rubyonrails.org/) application used to SOMETHING.
+This project is a [Rails](http://rubyonrails.org/) application used to manage events and conferences for our company. It is hosted at Heroku in [this website](http://greymane.herokuapp.com)
+
+The idea is use this app for registering events or conferences, for everyone see the day it will happen, the time, cost and location.
+That way, we can see who is interested and how the company will help.
 
 ## Dependencies
 
 To run this project you need to have:
 
-* Ruby 2.2.3 - You can use [RVM](http://rvm.io)
+* Ruby 2.3.1 - You can use [RVM](http://rvm.io)
 * [PostgreSQL](http://www.postgresql.org/)
   * OSX - [Postgress.app](http://postgresapp.com/)
   * Linux - `$ sudo apt-get install postgresql`
@@ -19,7 +22,7 @@ If you plan to **integrate** this project to Heroku, you'll need:
 ## Setup the project
 
 1. Install the dependencies above
-2. `$ git clone <REPOSITORY_URL> greymane` - Clone the project
+2. `$ git clone git@github.com:ffscalco/greymane.git` - Clone the project
 3. `$ cd greymane` - Go into the project folder
 4. `$ bin/setup` - Run the setup script
 5. `$ bin/rspec` - Run the specs to see if everything is working fine
