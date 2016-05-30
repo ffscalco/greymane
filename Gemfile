@@ -40,14 +40,15 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers',     '3.0.1', require: false
-  gem 'simplecov',            '0.11.1', require: false
-  gem 'email_spec',           '1.6.0'
-  gem 'capybara',             '2.5.0'
-  gem 'poltergeist',          '1.8.0'
-  gem 'vcr',                  '3.0.0'
-  gem 'webmock',              '1.22.3'
-  gem 'database_cleaner',     '1.5.1'
+  gem 'shoulda-matchers',          '3.0.1', require: false
+  gem 'simplecov',                 '0.11.1', require: false
+  gem 'email_spec',                '1.6.0'
+  gem 'capybara',                  '2.5.0'
+  gem 'poltergeist',               '1.8.0'
+  gem 'vcr',                       '3.0.0'
+  gem 'webmock',                   '1.22.3'
+  gem 'database_cleaner',          '1.5.1'
+  gem 'codeclimate-test-reporter', '0.5.0', require: nil
 end
 
 group :development, :test do

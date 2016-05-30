@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 if ENV['coverage'] == 'on'
   require 'simplecov'
   SimpleCov.start 'rails' do
