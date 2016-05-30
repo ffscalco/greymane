@@ -12,4 +12,6 @@ VCR.configure do |c|
   secrets_to_filter.each do |key, value|
     c.filter_sensitive_data("<#{key.upcase}>") { value }
   end
+
+  c.ignore_hosts 'codeclimate.com'
 end
