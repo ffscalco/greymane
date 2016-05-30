@@ -5,7 +5,7 @@ This project is a [Rails](http://rubyonrails.org/) application used to manage ev
 The idea is use this app for registering events or conferences, for everyone see the day it will happen, the time, cost and location.
 That way, we can see who is interested and how the company will help.
 
-[![CircleCI](https://circleci.com/gh/ffscalco/greymane/tree/master.svg?style=shield)](https://circleci.com/gh/ffscalco/greymane/tree/master) [![Code Climate](https://codeclimate.com/github/ffscalco/greymane/badges/gpa.svg)](https://codeclimate.com/github/ffscalco/greymane)
+[![CircleCI](https://circleci.com/gh/ffscalco/greymane/tree/master.svg?style=shield)](https://circleci.com/gh/ffscalco/greymane/tree/master) [![Code Climate](https://codeclimate.com/github/ffscalco/greymane/badges/gpa.svg)](https://codeclimate.com/github/ffscalco/greymane) [![Coverage Status](https://coveralls.io/repos/github/ffscalco/greymane/badge.svg?branch=master)](https://coveralls.io/github/ffscalco/greymane?branch=master)
 
 ## Dependencies
 

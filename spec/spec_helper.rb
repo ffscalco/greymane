@@ -1,5 +1,7 @@
 require "codeclimate-test-reporter"
+require "coveralls"
 CodeClimate::TestReporter.start
+Coveralls.wear!
 
 if ENV['coverage'] == 'on'
   require 'simplecov'

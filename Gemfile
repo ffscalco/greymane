@@ -49,6 +49,7 @@ group :test do
   gem 'webmock',                   '1.22.3'
   gem 'database_cleaner',          '1.5.1'
   gem 'codeclimate-test-reporter', '0.5.0', require: nil
+  gem 'coveralls',                 '0.8.13', require: false
 end
 
 group :development, :test do
