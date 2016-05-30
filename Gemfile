@@ -20,6 +20,9 @@ gem 'bitters',                '1.1.0'
 gem 'refills',                '0.1.0'
 gem 'normalize-rails',        '3.0.3'
 gem 'rollbar',                '2.11.3'
+gem 'devise',                 '4.1.1'
+gem 'omniauth',               '1.3.1'
+gem 'omniauth-google-oauth2', '0.4.1'
 
 group :production, :staging do
   gem 'rails_12factor',       '0.0.3'
