@@ -351,14 +351,14 @@ DEPENDENCIES
   email_spec (= 1.6.0)
   factory_girl_rails (= 4.5.0)
   flutie (= 2.0.0)
-  font-awesome-rails
+  font-awesome-rails (= 4.6.3.0)
   foreman (= 0.78.0)
   fuubar (= 2.0.0)
   jquery-rails (= 4.0.5)
-  jquery-turbolinks
+  jquery-turbolinks (= 2.1.0)
   jumpup (= 0.0.8)
   jumpup-heroku (= 0.0.6)
-  less-rails
+  less-rails (= 2.7.1)
   letter_opener (= 1.4.1)
   librato-rails (= 1.0.0)
   newrelic_rpm (~> 3.12)
@@ -372,7 +372,7 @@ DEPENDENCIES
   rack-canonical-host (= 0.1.0)
   rails (= 4.2.6)
   rails_12factor (= 0.0.3)
-  responders
+  responders (= 2.2.0)
   rollbar (= 2.11.3)
   rspec-rails (= 3.4.0)
   secure_headers (= 2.4.4)
@@ -382,7 +382,7 @@ DEPENDENCIES
   slim-rails (= 3.0.1)
   spring (= 1.5.0)
   spring-commands-rspec (= 1.0.4)
-  therubyracer
+  therubyracer (= 0.12.2)
   turbolinks (= 2.5.3)
   uglifier (= 2.7.2)
   vcr (= 3.0.0)
