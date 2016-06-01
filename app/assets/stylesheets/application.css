@@ -16,5 +16,7 @@
  *= require font-awesome
  *= require material-design-iconic-font
  *
+ *= require less/libs/toastr/toastr
+ *
  *= require_self
  */

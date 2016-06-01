@@ -18,6 +18,9 @@
 //= require js/libs/jquery-ui/jquery-ui.min
 //= require js/libs/bootstrap/bootstrap.min
 
+//= require js/libs/toastr/toastr
+//= require toastr.config
+
 //= require js/core/source/App
 //= require js/core/source/AppCard
 //= require js/core/source/AppForm
