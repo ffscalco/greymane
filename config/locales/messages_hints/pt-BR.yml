@@ -1,0 +1,6 @@
+pt-BR:
+  app_name: Greymane
+  app_keywords: "greymane, eventos, palestras, cadastrar eventos, cadastrar palestras"
+  app_description: "Este aplicativo serve para criar e gerenciar eventos e palestras entre membros de equipes."
+  messages:
+    destroy: Você tem certeza?

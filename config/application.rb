@@ -47,6 +47,7 @@ module Greymane
     config.i18n.enforce_available_locales = true
     config.i18n.default_locale = :'pt-BR'
     config.i18n.locale = :'pt-BR'
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.yml')]
 
     config.middleware.use Rack::Deflater
 
