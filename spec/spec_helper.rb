@@ -1,13 +1,18 @@
 require "codeclimate-test-reporter"
+require 'simplecov'
+require "coveralls"
 CodeClimate::TestReporter.start
 
 if ENV['coverage'] == 'on'
-  require 'simplecov'
   SimpleCov.start 'rails' do
     minimum_coverage 100
   end
 else
-  require "coveralls"
+  SimpleCov.formatter = Coveralls::SimpleCov::Formatter
+  SimpleCov.start do
+    add_filter 'config/initializers'
+  end
+
   Coveralls.wear!
 end
 
