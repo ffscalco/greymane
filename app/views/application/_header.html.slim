@@ -1,0 +1,22 @@
+header#header
+  .headerbar
+    .headerbar-left
+      ul.header-nav.header-nav-options
+        li.header-nav-brand
+          .brand-holder
+            = link_to root_path do
+              span.text-lg.text-bold.text-primary
+                = t("app_name")
+    -if user_signed_in?
+      .headerbar-right
+        ul.header-nav.header-nav-profile
+          li.dropdown
+            = link_to "javascript:void(0);", class: "dropdown-toggle ink-reaction", "data-toggle"=>"dropdown" do
+              = image_tag current_user.image
+              span.profile-info
+                = current_user.name
+                small
+                = current_user.team.name
+            ul.dropdown-menu.animation-dock
+              li
+                = link_to t("actions.logout"), destroy_user_session_path, method: :delete

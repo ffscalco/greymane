@@ -3,6 +3,13 @@ html lang="pt"
   head
     = render 'head'
 
-  body class=body_class
+  body class="header-fixed #{body_class}"
+    = render 'header'
     = render 'flash_toasters'
-    = yield
+    #base
+      #content
+        section
+          .section-body
+            .row
+              .col-sm-12
+                = yield
