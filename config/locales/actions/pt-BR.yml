@@ -1,0 +1,10 @@
+pt-BR:
+  actions:
+    edit: Editar
+    delete: Excluir
+    create: Criar!
+    back: Voltar
+    show: Visualizar
+    log_in: Entre com sua conta do Google!
+    update: Atualizar
+    logout: Sair

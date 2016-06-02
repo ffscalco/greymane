@@ -1,11 +1,15 @@
-# greymane
+# Greymane
+
+[![CircleCI](https://circleci.com/gh/ffscalco/greymane/tree/master.svg?style=shield)](https://circleci.com/gh/ffscalco/greymane/tree/master) [![Code Climate](https://codeclimate.com/github/ffscalco/greymane/badges/gpa.svg)](https://codeclimate.com/github/ffscalco/greymane) [![Coverage Status](https://coveralls.io/repos/github/ffscalco/greymane/badge.svg?branch=master)](https://coveralls.io/github/ffscalco/greymane?branch=master)
 
 This project is a [Rails](http://rubyonrails.org/) application used to manage events and conferences for our company. It is hosted at Heroku in [this website](http://greymane.herokuapp.com)
 
 The idea is use this app for registering events or conferences, for everyone see the day it will happen, the time, cost and location.
 That way, we can see who is interested and how the company will help.
 
-[![CircleCI](https://circleci.com/gh/ffscalco/greymane/tree/master.svg?style=shield)](https://circleci.com/gh/ffscalco/greymane/tree/master) [![Code Climate](https://codeclimate.com/github/ffscalco/greymane/badges/gpa.svg)](https://codeclimate.com/github/ffscalco/greymane) [![Coverage Status](https://coveralls.io/repos/github/ffscalco/greymane/badge.svg?branch=master)](https://coveralls.io/github/ffscalco/greymane?branch=master)
+For now, you can only signin with a google account (gmail or google apps).
+
+*The project is under development*
 
 ## Dependencies
 
@@ -70,6 +74,14 @@ First, check of your project has the correct configuration from [jumpup-heroku](
 6. `$ git checkout master` - Checkout to `master` branch (so you don't commit directly on `production` branch)
 
 :warning: All your daily work must be done on the `master` branch (or in a feature branch), never on `production` branch! The only thing you do on `production` is merging the changes from `master` and deploying to Heroku.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
 
 ## Generated with PAH
 

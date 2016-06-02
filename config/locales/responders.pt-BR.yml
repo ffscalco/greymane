@@ -1,0 +1,23 @@
+pt-BR:
+  flash:
+    devise:
+      sessions:
+        create:
+          success: ""
+      passwords:
+        create:
+          success: ""
+          error: ""
+        update:
+          success: ""
+          error: ""
+    actions:
+      create:
+        success: "%{resource_name} foi criado com sucesso."
+        error: "%{resource_name} não pode ser criado."
+      update:
+        success: "%{resource_name} foi atualizado com sucesso."
+        error: "%{resource_name} não pode ser atualizado."
+      destroy:
+        success: "%{resource_name} foi removido com sucesso."
+        error: "%{resource_name} não pode ser removido."

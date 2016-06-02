@@ -1,0 +1,19 @@
+meta charset="utf-8"
+meta content="IE=edge" http-equiv="X-UA-Compatible"
+meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+meta name="keywords" content= t('app_keywords')
+meta name="description" content= t('app_description')
+
+title
+  = page_title(app_name: t("app_name"))
+
+-#link href="/favicon.ico" rel=("shortcut icon")
+
+link href='http://fonts.googleapis.com/css?family=Roboto:300italic,400italic,300,400,500,700,900' rel='stylesheet' type='text/css'
+
+= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+= javascript_include_tag 'application', 'data-turbolinks-track' => true
+= csrf_meta_tags
+
+/![if lt IE 9]
+  script src="https://raw.githubusercontent.com/aFarkas/html5shiv/master/dist/html5shiv.min.js"
