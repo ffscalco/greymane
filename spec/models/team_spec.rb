@@ -11,7 +11,7 @@ RSpec.describe Team, type: :model do
     context "when a team doesn't exist" do
       it "create a team" do
         expect {
-          Team.get_team_by_email("some@email.com")
+          Team.get_team_by_email("some@fake_email.com")
         }.to change(Team, :count).by(1)
       end
 
