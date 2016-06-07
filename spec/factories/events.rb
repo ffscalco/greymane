@@ -9,5 +9,7 @@ FactoryGirl.define do
     start_time "12:18:16"
     end_date "2016-06-02"
     end_time "12:18:16"
+
+    team { FactoryGirl.build(:team) }
   end
 end

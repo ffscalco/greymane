@@ -1,3 +1,5 @@
 class Event < ActiveRecord::Base
-  validates :name, :local, :subject, :start_date, :end_date, presence: true
+  belongs_to :team
+
+  validates :name, :local, :subject, :start_date, :end_date, :team, presence: true
 end

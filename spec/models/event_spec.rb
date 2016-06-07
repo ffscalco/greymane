@@ -21,5 +21,13 @@ RSpec.describe Event, type: :model do
     it "require a end_date" do
       is_expected.to validate_presence_of(:end_date)
     end
+
+    it "belongs to team" do
+      is_expected.to belong_to(:team)
+    end
+
+    it "require a team" do
+      is_expected.to validate_presence_of(:team)
+    end
   end
 end
