@@ -19,15 +19,15 @@ ActiveRecord::Schema.define(version: 20160607025135) do
   create_table "events", force: :cascade do |t|
     t.string   "name"
     t.string   "local"
-    t.decimal  "price",      precision: 2
+    t.decimal  "price",      precision: 8, scale: 2
     t.string   "site"
     t.text     "subject"
     t.date     "start_date"
     t.time     "start_time"
     t.date     "end_date"
     t.time     "end_time"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "team_id"
   end
 

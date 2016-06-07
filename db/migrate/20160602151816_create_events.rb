@@ -3,7 +3,7 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string :name
       t.string :local
-      t.decimal :price, precision: 2
+      t.decimal :price, precision: 8, scale: 2
       t.string :site
       t.text :subject
       t.date :start_date
