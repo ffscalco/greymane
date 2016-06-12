@@ -22,16 +22,20 @@ RSpec.describe EventsController, type: :controller do
   end
 
   describe "GET #index" do
-    it "assigns all events as @events" do
-      event = FactoryGirl.create(:event, valid_attributes)
+    it "assigns all events of the current_user team as @events" do
+      event = FactoryGirl.create(:event, valid_attributes.merge({team_id: controller.current_user.team.id}))
+      event2 = FactoryGirl.create(:event, valid_attributes.merge({team_id: controller.current_user.team.id}))
+      event3 = FactoryGirl.create(:event, valid_attributes)
+
       get :index, {}
-      expect(assigns(:events)).to eq([event])
+      expect(Event.all.size).to eq(3)
+      expect(assigns(:events)).to match_array([event, event2])
     end
 
     it "order the events by start_date and start time" do
-      event1 = FactoryGirl.create(:event, valid_attributes)
-      event2 = FactoryGirl.create(:event, start_date: "2016-06-02", start_time: "09:00:00")
-      event3 = FactoryGirl.create(:event, start_date: "2016-06-01", start_time: "09:00:00")
+      event1 = FactoryGirl.create(:event, valid_attributes.merge({team_id: controller.current_user.team.id}))
+      event2 = FactoryGirl.create(:event, start_date: "2016-06-02", start_time: "09:00:00", team_id: controller.current_user.team.id)
+      event3 = FactoryGirl.create(:event, start_date: "2016-06-01", start_time: "09:00:00", team_id: controller.current_user.team.id)
 
       get :index, {}
       expect(assigns(:events)).to eq([event3, event2, event1])

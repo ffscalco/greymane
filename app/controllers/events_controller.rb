@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:edit, :update, :destroy]
 
   def index
-    @events = Event.all.order(:start_date, :start_time)
+    @events = Event.from_team(current_user.team).order(:start_date, :start_time)
     respond_with(@events)
   end
 
