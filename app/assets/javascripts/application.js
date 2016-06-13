@@ -20,6 +20,10 @@
 
 //= require js/libs/toastr/toastr
 //= require toastr.config
+//= require js/libs/bootstrap-datepicker/bootstrap-datepicker
+//= require js/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR
+//= require js/libs/inputmask/jquery.inputmask.bundle.min
+//= require datetime.config
 
 //= require js/core/source/App
 //= require js/core/source/AppCard
