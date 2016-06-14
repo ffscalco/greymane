@@ -24,6 +24,8 @@
 //= require js/libs/bootstrap-datepicker/locales/bootstrap-datepicker.pt-BR
 //= require js/libs/inputmask/jquery.inputmask.bundle.min
 //= require datetime.config
+//= require autoNumeric/autoNumeric-min
+//= require autoNumeric.config
 
 //= require js/core/source/App
 //= require js/core/source/AppCard
