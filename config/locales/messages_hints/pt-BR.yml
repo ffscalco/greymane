@@ -4,3 +4,8 @@ pt-BR:
   app_description: "Este aplicativo serve para criar e gerenciar eventos e palestras entre membros de equipes."
   messages:
     destroy: Você tem certeza?
+  events:
+    create:
+        title: Novo Evento
+    update:
+      title: Editar Evento
