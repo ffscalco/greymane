@@ -19,5 +19,7 @@
  *= require less/libs/toastr/toastr
  *= require less/libs/bootstrap-datepicker/datepicker3
  *
+ *= require overwrites
+ *
  *= require_self
  */
