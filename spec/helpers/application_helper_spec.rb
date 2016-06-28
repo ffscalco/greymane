@@ -1,5 +1,8 @@
 require 'rails_helper'
 
+class SomeModel; end
+class SomeModelPresenter < SimpleDelegator; end
+
 RSpec.describe ApplicationHelper, :type => :helper do
   describe "#normalize_flash_keys" do
     it "return 'success' if key is notice" do
@@ -13,6 +16,11 @@ RSpec.describe ApplicationHelper, :type => :helper do
     it "return the key itself by default" do
       expect(helper.normalize_flash_keys('success')).to eq('success')
     end
+  end
 
+  describe "#present" do
+    it "return a model presenter" do
+      expect(helper.present(SomeModel.new)).to be_a(SomeModelPresenter)
+    end
   end
 end
