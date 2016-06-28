@@ -5,16 +5,16 @@ pt-BR:
         one: Evento
         other: Eventos
     attributes:
-        event:
-          name: Nome
-          local: Local
-          price: Valor
-          site: Site
-          subject: Assunto
-          start_date: Dia de início
-          start_time: Hora
-          end_date: Dia de término
-          end_time: Hora
+      event:
+        name: Nome
+        local: Local
+        price: Valor
+        site: Site
+        subject: Assunto
+        start_date: Dia de início
+        start_time: Hora
+        end_date: Dia de término
+        end_time: Hora
   activerecord:
     <<: *models_and_attributes
   activemodel:
