@@ -5,13 +5,13 @@ RSpec.describe EventsController, type: :controller do
     {
       :name => "Awesome Event",
       :local => "Somewhere",
-      :price => "25.99",
+      :price => "25,99",
       :site => "awesome_event.com",
       :subject => "This awesome event is about awesomeness",
-      :start_date => "2016-06-02",
-      :start_time => "13:00:00",
-      :end_date => "2016-06-02",
-      :end_time => "18:00:00"
+      :start_date => "01/06/2016",
+      :start_time => "13:00",
+      :end_date => "01/06/2016",
+      :end_time => "18:00"
     }
   }
 
@@ -34,11 +34,11 @@ RSpec.describe EventsController, type: :controller do
 
     it "order the events by start_date and start time" do
       event1 = FactoryGirl.create(:event, valid_attributes.merge({team_id: controller.current_user.team.id}))
-      event2 = FactoryGirl.create(:event, start_date: "2016-06-02", start_time: "09:00:00", team_id: controller.current_user.team.id)
-      event3 = FactoryGirl.create(:event, start_date: "2016-06-01", start_time: "09:00:00", team_id: controller.current_user.team.id)
+      event2 = FactoryGirl.create(:event, start_date: "02/06/2016", start_time: "09:00", team_id: controller.current_user.team.id)
+      event3 = FactoryGirl.create(:event, start_date: "01/06/2016", start_time: "09:00", team_id: controller.current_user.team.id)
 
       get :index, {}
-      expect(assigns(:events)).to eq([event3, event2, event1])
+      expect(assigns(:events)).to eq([event3, event1, event2])
     end
   end
 
@@ -107,7 +107,7 @@ RSpec.describe EventsController, type: :controller do
 
         put :update, {:id => event.to_param, :event => new_attributes}
         event.reload
-        expect(event.price.to_s).to eq("100.0")
+        expect(event.price.to_s).to eq("100,00")
       end
 
       it "assigns the requested event as @event" do
