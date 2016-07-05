@@ -22,6 +22,14 @@ RSpec.describe Event, type: :model do
       is_expected.to validate_presence_of(:end_date)
     end
 
+    it "require a start_time" do
+      is_expected.to validate_presence_of(:start_time)
+    end
+
+    it "require a end_time" do
+      is_expected.to validate_presence_of(:end_time)
+    end
+
     it "belongs to team" do
       is_expected.to belong_to(:team)
     end
