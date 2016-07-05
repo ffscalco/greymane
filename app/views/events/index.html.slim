@@ -1,0 +1,31 @@
+.container
+  h2.text-light.text-center
+    = "#{Event.model_name.human(count: 2)} - #{current_user.team.name}"
+  p.text-center
+    = link_to "#{t("actions.new")} #{Event.model_name.human(count: 1)}", new_event_path, class: "btn btn-raised btn-success ink-reaction"
+
+  - if @events.any?
+    ul.timeline.collapse-md
+      - @events.each_with_index do |event, idx|
+        - timeline_class = idx.odd? ? "timeline-inverted" : ""
+        li class="#{timeline_class}"
+          .timeline-circ
+          .timeline-entry
+            .card
+              .card-body.small-padding
+                p
+                  span.text-lg
+                    = "#{event.name} - "
+                  span.text-primary
+                    = present(event).show_event_datetime
+                  br
+                  span.opacity-50
+                    = present(event).show_price
+                    br
+                    = event.local
+                    br
+                = event.subject
+                p
+                  = link_to t("actions.show"), event_path(event), class: "text-primary"
+  - else
+    h2.text-light.text-center = t("messages.no_events")

@@ -5,8 +5,11 @@ pt-BR:
   free: Gratuito
   messages:
     destroy: Você tem certeza?
+    no_events: "Sem eventos no momento =("
   events:
     create:
         title: Novo Evento
     update:
       title: Editar Evento
+    show:
+      title: "%{event_name}"

@@ -1,0 +1,38 @@
+.card.card-underline
+  .card-head.card-head-sm.style-primary
+    header
+      h3 =t('events.show.title', event_name: @event.name)
+  .card-body
+    .row
+      .col-sm-12
+        span.text-primary
+          = "#{Event.human_attribute_name("local")}: "
+        = @event.local
+      .col-sm-12
+        span.text-primary
+          = "#{Event.human_attribute_name("price")}: "
+        = number_to_currency(@event.price_cents)
+      - unless @event.site.blank?
+        .col-sm-12
+          span.text-primary
+            = "#{Event.human_attribute_name("site")}: "
+          = link_to @event.site, @event.site
+      .col-sm-12
+        span.text-primary
+          = "#{Event.human_attribute_name("start_date")}: "
+        = "#{l(@event.start_date)} (#{l(@event.start_time, format: "%H:%M")})"
+      .col-sm-12
+        span.text-primary
+          = "#{Event.human_attribute_name("end_date")}: "
+        = "#{l(@event.end_date)} (#{l(@event.end_time, format: "%H:%M")})"
+      .col-sm-12
+        span.text-primary
+          = "#{Event.human_attribute_name("subject")}: "
+        = @event.subject
+  .card-actionbar
+    .card-actionbar-row
+      .pull-left
+        = link_to t("actions.back"), events_path, class: "btn btn-raised btn-info ink-reaction"
+      .pull-right
+        = link_to t("actions.edit"), edit_event_path(@event), class: "btn btn-raised btn-success ink-reaction"
+        = link_to t("actions.delete"), event_path(@event), class: "btn btn-raised btn-danger ink-reaction", :"data-confirm" => t("messages.destroy"), :method => :delete
