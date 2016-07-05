@@ -21,4 +21,12 @@ class EventPresenter < SimpleDelegator
   def format_end_time
     I18n.l(event.end_time, format: "%H:%M") unless event.end_time.nil?
   end
+
+  def show_event_datetime
+    if event.start_date == event.end_date
+      "#{I18n.l(event.start_date)} (#{I18n.l(event.start_time, format: "%H:%M")} - #{I18n.l(event.end_time, format: "%H:%M")})"
+    else
+      "#{I18n.l(event.start_date)} #{I18n.l(event.start_time, format: "%H:%M")} - #{I18n.l(event.end_date)} #{I18n.l(event.end_time, format: "%H:%M")}"
+    end
+  end
 end
