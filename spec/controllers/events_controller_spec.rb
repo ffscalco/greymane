@@ -57,6 +57,14 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
+  describe "GET #show" do
+    it "assigns the requested event as @event" do
+      event = FactoryGirl.create(:event, valid_attributes)
+      get :show, {:id => event.to_param}
+      expect(assigns(:event)).to eq(event)
+    end
+  end
+
   describe "POST #create" do
     context "with valid params" do
       it "creates a new Event" do
