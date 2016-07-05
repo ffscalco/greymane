@@ -29,4 +29,16 @@ class EventPresenter < SimpleDelegator
       "#{I18n.l(event.start_date)} #{I18n.l(event.start_time, format: "%H:%M")} - #{I18n.l(event.end_date)} #{I18n.l(event.end_time, format: "%H:%M")}"
     end
   end
+
+  def show_price
+    return I18n.t("free") if event.price_cents == 0
+
+    helpers.number_to_currency(event.price_cents)
+  end
+
+  private
+
+    def helpers
+      ApplicationController.helpers
+    end
 end
