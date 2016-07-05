@@ -11,7 +11,7 @@
       .col-sm-12
         span.text-primary
           = "#{Event.human_attribute_name("price")}: "
-        = number_to_currency(@event.price_cents)
+        = number_to_currency(@event.price.to_s)
       - unless @event.site.blank?
         .col-sm-12
           span.text-primary

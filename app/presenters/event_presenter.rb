@@ -33,7 +33,7 @@ class EventPresenter < SimpleDelegator
   def show_price
     return I18n.t("free") if event.price_cents == 0
 
-    helpers.number_to_currency(event.price_cents)
+    helpers.number_to_currency(event.price.to_s)
   end
 
   private
