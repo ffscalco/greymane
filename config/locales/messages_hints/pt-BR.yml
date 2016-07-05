@@ -6,6 +6,21 @@ pt-BR:
   messages:
     destroy: Você tem certeza?
     no_events: "Sem eventos no momento =("
+    signup: " para realizar o login na sua conta Google Empresa!"
+    start: "Para ver os eventos que a %{team} está interessada, acesse "
+  titles:
+    welcome: "Seja bem vindo %{user_name}!"
+    welcome2: Seja bem vindo!
+    what_is_it: Para que serve este sistema?
+    possible_to_do: O que é possível fazer no momento?
+    not_possible_to_do: O que <i>não</i> é possível fazer no momento?
+  texts:
+    what_is_it: "Este sistema irá ajudar os colaboradoes da empresa, centralizando os eventos e palestras que são de comum interesse."
+    possible_to_do: "Por enquanto, apenas é possível cadastrar eventos."
+    not_possible_to_do: "As seguintes <i>features</i> serão implementadas em breve:"
+  features:
+    comments: Adicionar comentários nos eventos
+    wanna_go: Possibilidade de marcar se tenho interesse em ir ao evento
   events:
     create:
         title: Novo Evento
