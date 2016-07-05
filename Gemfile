@@ -20,6 +20,7 @@ gem 'rollbar',                '2.11.3'
 gem 'devise',                 '4.1.1'
 gem 'omniauth',               '1.3.1'
 gem 'omniauth-google-oauth2', '0.4.1'
+gem 'money-rails',            '1.6.1'
 
 group :production, :staging do
   gem 'rails_12factor',       '0.0.3'

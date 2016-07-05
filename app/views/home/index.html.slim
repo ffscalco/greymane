@@ -1,6 +1,49 @@
 - if user_signed_in?
-  h1
-    = "Signed in as #{current_user.name} . Not you?"
-  = link_to "Sign out", destroy_user_session_path, :method => :delete
+  .card.card-underline
+    .card-head.card-head-sm.style-primary
+      header
+        h3 =t('titles.welcome', user_name: current_user.name)
+    .card-body
+      .row
+        .col-sm-12
+          = t("messages.start", team: current_user.team.name)
+          span.text-primary
+            = link_to t("actions.events"), events_path
 - else
-  = link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path
+  .card.card-underline
+    .card-head.card-head-sm.style-primary
+      header
+        h3 =t('titles.welcome2')
+    .card-body
+      .row
+        .col-sm-12
+          span.text-primary
+            = link_to t("actions.signup"), user_google_oauth2_omniauth_authorize_path
+          = t("messages.signup")
+.card.card-underline
+    .card-head.card-head-sm.style-primary
+      header
+        h3 =t('titles.what_is_it')
+    .card-body
+      .row
+        .col-sm-12
+          = t("texts.what_is_it")
+.card.card-underline
+    .card-head.card-head-sm.style-primary
+      header
+        h3 =t('titles.possible_to_do')
+    .card-body
+      .row
+        .col-sm-12
+          = t("texts.possible_to_do")
+.card.card-underline
+    .card-head.card-head-sm.style-primary
+      header
+        h3 =raw t('titles.not_possible_to_do')
+    .card-body
+      .row
+        .col-sm-12
+          = raw t("texts.not_possible_to_do")
+          ul
+            li = t("features.comments")
+            li = t("features.wanna_go")

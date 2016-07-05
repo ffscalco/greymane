@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :home, only: [:index]
+  resources :events
 
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }, :skip => [:sessions]
   devise_scope :user do

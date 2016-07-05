@@ -1,5 +1,20 @@
 pt-BR:
   models_and_attributes: &models_and_attributes
+    models:
+      event:
+        one: Evento
+        other: Eventos
+    attributes:
+      event:
+        name: Nome
+        local: Local
+        price: Valor
+        site: Site
+        subject: Assunto
+        start_date: Dia de início
+        start_time: Hora
+        end_date: Dia de término
+        end_time: Hora
   activerecord:
     <<: *models_and_attributes
   activemodel:

@@ -17,6 +17,8 @@ Bundler.require(*Rails.groups)
 
 module Greymane
   class Application < Rails::Application
+    config.app_generators.scaffold_controller :responders_controller
+
     # Do not generate specs for views and requests. Also, do not generate assets.
     config.generators do |g|
       g.helper false
@@ -54,5 +56,7 @@ module Greymane
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    config.responders.flash_keys = [ :success, :error ]
   end
 end

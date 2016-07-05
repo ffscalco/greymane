@@ -1,10 +1,14 @@
 pt-BR:
   actions:
+    action: Ações
     edit: Editar
     delete: Excluir
-    create: Criar!
+    create: Criar
     back: Voltar
-    show: Visualizar
+    show: Mais detalhes sobre o evento
+    new: Novo
+    signup: Clique aqui
+    events: este link
     log_in: Entre com sua conta do Google!
     update: Atualizar
     logout: Sair

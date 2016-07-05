@@ -1,0 +1,33 @@
+= simple_form_for(@event) do |f|
+  .card-body
+    - unless f.error_notification.nil?
+      .alert.alert-danger
+        = f.error_notification
+    .row
+      .col-sm-6
+        = f.input :name, autofocus: true
+      .col-sm-6
+        = f.input :local
+    .row
+      .col-sm-6
+        = f.input :price, as: :string, input_html: {data: {role: :money, a_sep: t("number.currency.format.delimiter"), a_dec: t("number.currency.format.separator")}}, :label => "#{t("activerecord.attributes.event.price")} (#{t("number.currency.format.unit")})"
+      .col-sm-6
+        = f.input :site
+    .row
+      .col-sm-3
+        = f.input :start_date, as: :string, input_html: {class: "date", value: present(@event).format_start_date}
+      .col-sm-3
+        = f.input :start_time, as: :string, input_html: {class: "time-mask", value: present(@event).format_start_time}
+      .col-sm-3
+        = f.input :end_date, as: :string, input_html: {class: "date", value: present(@event).format_end_date}
+      .col-sm-3
+        = f.input :end_time, as: :string, input_html: {class: "time-mask", value: present(@event).format_end_time }
+    .row
+      .col-sm-12
+        = f.input :subject
+  .card-actionbar
+    .card-actionbar-row
+      .pull-left
+        = link_to t("actions.back"), events_path, class: "btn btn-raised btn-info ink-reaction"
+      .pull-right
+        = f.button :submit, class: "btn-raised btn-success ink-reaction"

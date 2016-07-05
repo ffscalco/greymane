@@ -9,4 +9,9 @@ module ApplicationHelper
       key
     end
   end
+
+  def present(model)
+    klass = "#{model.class}Presenter".constantize
+    klass.new(model)
+  end
 end
